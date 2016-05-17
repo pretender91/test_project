@@ -8,9 +8,7 @@ defmodule TestProject do
 
     children = [
       # Start the endpoint when the application starts
-      supervisor(TestProject.Endpoint, []),
-      # Start the Ecto repository
-      supervisor(TestProject.Repo, []),
+      supervisor(TestProject.Endpoint, [])
       # Here you could define other workers and supervisors as children
       # worker(TestProject.Worker, [arg1, arg2, arg3]),
     ]

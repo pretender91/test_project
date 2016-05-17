@@ -27,3 +27,10 @@ import_config "#{Mix.env}.exs"
 config :phoenix, :generators,
   migration: true,
   binary_id: false
+
+config :vex,
+  sources: [[numericality: TestProject.Validators.Numericality], Vex.Validators]
+
+config :elasticsearch,
+  host: "http://localhost",
+  port: 9200

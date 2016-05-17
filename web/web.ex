@@ -18,11 +18,8 @@ defmodule TestProject.Web do
 
   def model do
     quote do
-      use Ecto.Schema
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query, only: [from: 1, from: 2]
+      use TestProject.Repo.Schema
+      use Vex.Struct
     end
   end
 
@@ -31,8 +28,6 @@ defmodule TestProject.Web do
       use Phoenix.Controller
 
       alias TestProject.Repo
-      import Ecto
-      import Ecto.Query, only: [from: 1, from: 2]
 
       import TestProject.Router.Helpers
       import TestProject.Gettext
@@ -66,8 +61,6 @@ defmodule TestProject.Web do
       use Phoenix.Channel
 
       alias TestProject.Repo
-      import Ecto
-      import Ecto.Query, only: [from: 1, from: 2]
       import TestProject.Gettext
     end
   end
